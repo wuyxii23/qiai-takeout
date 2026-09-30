@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#6b7f5e" />
+<meta name="theme-color" content="#8ba07a" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <title>气气外卖 · 情侣道歉店</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html, body { background: #f1f4ec; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; color: #1f2937; }
-#app { max-width: 420px; margin: 0 auto; min-height: 100vh; background: #f1f4ec; box-shadow: 0 0 24px rgba(107,127,94,.10); position: relative; }
+html, body { background: #f5f8f0; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; color: #1f2937; }
+#app { max-width: 420px; margin: 0 auto; min-height: 100vh; background: #f5f8f0; box-shadow: 0 0 24px rgba(139,160,122,.10); position: relative; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 input, textarea { font-family: inherit; font-size: 14px; }
 .hidden { display: none !important; }
@@ -19,27 +19,27 @@ input, textarea { font-family: inherit; font-size: 14px; }
 .gate { min-height: 100vh; background: linear-gradient(to bottom, #e8eee2, #f0f4ec 50%, #f7f5ec); display: flex; align-items: center; justify-content: center; padding: 24px; }
 .gate-box { width: 100%; max-width: 340px; }
 .gate-emoji { text-align: center; font-size: 56px; animation: bounce 1.6s infinite; }
-.gate-title { text-align: center; margin-top: 14px; font-size: 28px; font-weight: 900; color: #55684a; letter-spacing: 2px; }
-.gate-slogan { text-align: center; font-size: 12px; color: #8ba07e; margin-top: 6px; }
+.gate-title { text-align: center; margin-top: 14px; font-size: 28px; font-weight: 900; color: #71855f; letter-spacing: 2px; }
+.gate-slogan { text-align: center; font-size: 12px; color: #9db18a; margin-top: 6px; }
 .gate-btns { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
 .btn-big { width: 100%; height: 52px; border-radius: 16px; font-size: 16px; font-weight: 600; }
-.btn-her { background: linear-gradient(to right, #6b7f5e, #55684a); color: #fff; box-shadow: 0 6px 16px rgba(107,127,94,.3); }
-.btn-his { border: 2px solid #cdd8c4; color: #55684a; background: rgba(255,255,255,.6); }
-.gate-back { font-size: 13px; color: #8ba07e; }
+.btn-her { background: linear-gradient(to right, #8ba07a, #71855f); color: #fff; box-shadow: 0 6px 16px rgba(139,160,122,.3); }
+.btn-his { border: 2px solid #d8e0cd; color: #71855f; background: rgba(255,255,255,.6); }
+.gate-back { font-size: 13px; color: #9db18a; }
 .gate-input-row { display: flex; gap: 8px; margin-top: 14px; }
-.gate-input { flex: 1; height: 44px; border-radius: 12px; border: 1.5px solid #cdd8c4; text-align: center; font-size: 16px; letter-spacing: 6px; outline: none; background: #fff; }
-.gate-input:focus { border-color: #6b7f5e; box-shadow: 0 0 0 3px rgba(107,127,94,.15); }
-.btn-enter { height: 44px; padding: 0 20px; border-radius: 12px; background: #6b7f5e; color: #fff; font-weight: 600; }
-.gate-hint { text-align: center; font-size: 11px; color: #a9b89c; margin-top: 12px; }
+.gate-input { flex: 1; height: 44px; border-radius: 12px; border: 1.5px solid #d8e0cd; text-align: center; font-size: 16px; letter-spacing: 6px; outline: none; background: #fff; }
+.gate-input:focus { border-color: #8ba07a; box-shadow: 0 0 0 3px rgba(139,160,122,.15); }
+.btn-enter { height: 44px; padding: 0 20px; border-radius: 12px; background: #8ba07a; color: #fff; font-weight: 600; }
+.gate-hint { text-align: center; font-size: 11px; color: #b5c4a4; margin-top: 12px; }
 
 /* ===== 通用 ===== */
-.banner { background: linear-gradient(to right, #6b7f5e, #55684a, #6b7f5e); color: #fff; padding: 30px 20px 44px; border-radius: 0 0 24px 24px; }
+.banner { background: linear-gradient(to right, #8ba07a, #71855f, #8ba07a); color: #fff; padding: 30px 20px 44px; border-radius: 0 0 24px 24px; }
 .banner-row { display: flex; align-items: center; gap: 12px; }
 .banner-emoji { font-size: 38px; }
 .banner-name { font-size: 24px; font-weight: 900; }
 .banner-slogan { font-size: 11px; opacity: .9; margin-top: 2px; }
 .announce { margin-top: 14px; background: rgba(255,255,255,.2); border-radius: 12px; padding: 8px 12px; font-size: 11px; line-height: 1.6; }
-.chip { display: inline-block; font-size: 10px; background: #e6ecdf; color: #55684a; border-radius: 6px; padding: 1px 6px; margin-left: 4px; }
+.chip { display: inline-block; font-size: 10px; background: #edf1e4; color: #71855f; border-radius: 6px; padding: 1px 6px; margin-left: 4px; }
 .card { background: #fff; border-radius: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.05); padding: 14px; margin: 0 16px 12px; }
 .float-panel { margin: -22px 16px 0; position: relative; }
 .section-title { font-weight: 700; color: #374151; font-size: 15px; margin: 20px 16px 8px; }
@@ -48,24 +48,24 @@ input, textarea { font-family: inherit; font-size: 14px; }
 .menu-info { flex: 1; min-width: 0; }
 .menu-name { font-weight: 600; font-size: 14px; }
 .menu-desc { font-size: 11px; color: #9ca3af; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
-.menu-price { color: #55684a; font-weight: 700; font-size: 14px; margin-top: 3px; }
+.menu-price { color: #71855f; font-weight: 700; font-size: 14px; margin-top: 3px; }
 .stepper { display: flex; align-items: center; gap: 10px; }
 .step-btn { width: 28px; height: 28px; border-radius: 50%; font-size: 16px; display: flex; align-items: center; justify-content: center; }
-.step-add { background: #6b7f5e; color: #fff; }
-.step-minus { border: 1.5px solid #cdd8c4; color: #55684a; }
-.step-qty { width: 16px; text-align: center; font-weight: 700; color: #55684a; font-size: 14px; }
+.step-add { background: #8ba07a; color: #fff; }
+.step-minus { border: 1.5px solid #d8e0cd; color: #71855f; }
+.step-qty { width: 16px; text-align: center; font-weight: 700; color: #71855f; font-size: 14px; }
 
 /* 购物车条 */
 .cartbar-wrap { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); width: 92%; max-width: 400px; z-index: 30; }
 .cartbar { width: 100%; background: #1f2937; color: #fff; border-radius: 999px; box-shadow: 0 8px 24px rgba(0,0,0,.25); padding: 8px 8px 8px 18px; display: flex; align-items: center; justify-content: space-between; }
-.cart-count { background: #6b7f5e; border-radius: 999px; min-width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; margin-right: 8px; padding: 0 6px; }
+.cart-count { background: #8ba07a; border-radius: 999px; min-width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; margin-right: 8px; padding: 0 6px; }
 .cart-total { font-weight: 800; font-size: 18px; }
-.cart-checkout { background: linear-gradient(to right, #6b7f5e, #55684a); border-radius: 999px; padding: 10px 20px; font-weight: 700; font-size: 14px; color: #fff; }
+.cart-checkout { background: linear-gradient(to right, #8ba07a, #71855f); border-radius: 999px; padding: 10px 20px; font-weight: 700; font-size: 14px; color: #fff; }
 
 /* 抽屉 */
 .sheet-mask { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 40; }
 .sheet { position: fixed; left: 50%; transform: translateX(-50%); bottom: 0; width: 100%; max-width: 420px; background: #fff; border-radius: 24px 24px 0 0; z-index: 41; max-height: 85vh; overflow-y: auto; padding-bottom: env(safe-area-inset-bottom); animation: slideup .25s ease-out; }
-.sheet-head { padding: 18px 20px 6px; font-size: 17px; font-weight: 700; color: #55684a; }
+.sheet-head { padding: 18px 20px 6px; font-size: 17px; font-weight: 700; color: #71855f; }
 .sheet-body { padding: 8px 20px 24px; display: flex; flex-direction: column; gap: 12px; }
 .line-row { display: flex; justify-content: space-between; font-size: 14px; }
 .red-box { background: #fffbeb; border-radius: 12px; padding: 12px; font-size: 13px; display: flex; flex-direction: column; gap: 8px; }
@@ -75,22 +75,22 @@ input, textarea { font-family: inherit; font-size: 14px; }
 .red-preset.on { background: #ef4444; border-color: #ef4444; color: #fff; font-weight: 700; }
 .red-input { width: 100%; border: 1px solid #fde68a; border-radius: 8px; padding: 8px 10px; outline: none; background: #fff; }
 .area-label { font-size: 11px; color: #9ca3af; margin-bottom: 4px; }
-.textarea { width: 100%; border: 1.5px solid #cdd8c4; border-radius: 10px; padding: 10px; resize: none; outline: none; }
-.textarea:focus { border-color: #6b7f5e; }
+.textarea { width: 100%; border: 1.5px solid #d8e0cd; border-radius: 10px; padding: 10px; resize: none; outline: none; }
+.textarea:focus { border-color: #8ba07a; }
 .total-row { display: flex; justify-content: space-between; align-items: center; padding-top: 4px; }
-.total-num { font-size: 24px; font-weight: 900; color: #55684a; }
-.btn-submit { width: 100%; height: 46px; border-radius: 12px; background: linear-gradient(to right, #6b7f5e, #55684a); color: #fff; font-size: 15px; font-weight: 700; }
+.total-num { font-size: 24px; font-weight: 900; color: #71855f; }
+.btn-submit { width: 100%; height: 46px; border-radius: 12px; background: linear-gradient(to right, #8ba07a, #71855f); color: #fff; font-size: 15px; font-weight: 700; }
 .btn-submit:disabled { opacity: .5; }
 
 /* 骑手动画页 */
 .rider-page { min-height: 100vh; background: linear-gradient(to bottom, #f7f5ec, #e8eee2); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; padding: 24px; }
 .rider-emoji { font-size: 72px; animation: ride 1.2s ease-in-out infinite; }
-.rider-title { font-size: 20px; font-weight: 800; color: #55684a; }
-.rider-sub { font-size: 13px; color: #8ba07e; }
-.btn-ghost { border: 1.5px solid #cdd8c4; color: #55684a; border-radius: 12px; padding: 10px 22px; font-size: 14px; background: rgba(255,255,255,.7); }
+.rider-title { font-size: 20px; font-weight: 800; color: #71855f; }
+.rider-sub { font-size: 13px; color: #9db18a; }
+.btn-ghost { border: 1.5px solid #d8e0cd; color: #71855f; border-radius: 12px; padding: 10px 22px; font-size: 14px; background: rgba(255,255,255,.7); }
 
 /* 收单台 */
-.owner-head { background: linear-gradient(to right, #55684a, #6b7f5e); color: #fff; padding: 30px 20px 38px; border-radius: 0 0 24px 24px; }
+.owner-head { background: linear-gradient(to right, #71855f, #8ba07a); color: #fff; padding: 30px 20px 38px; border-radius: 0 0 24px 24px; }
 .owner-row { display: flex; justify-content: space-between; align-items: flex-start; }
 .owner-title { font-size: 22px; font-weight: 900; }
 .owner-sub { font-size: 11px; opacity: .9; margin-top: 3px; }
@@ -98,8 +98,8 @@ input, textarea { font-family: inherit; font-size: 14px; }
 .owner-num-label { font-size: 10px; opacity: .9; text-align: right; }
 .pending-tip { margin-top: 12px; background: rgba(255,255,255,.25); border-radius: 12px; padding: 8px 12px; font-size: 13px; font-weight: 600; animation: pulse 1.6s infinite; }
 .filter-row { display: flex; gap: 8px; padding: 14px 16px 0; }
-.filter-btn { flex: 1; border-radius: 999px; padding: 9px 0; font-size: 13px; font-weight: 600; background: #fff; color: #6b7f5e; }
-.filter-btn.on { background: #6b7f5e; color: #fff; box-shadow: 0 4px 10px rgba(107,127,94,.3); }
+.filter-btn { flex: 1; border-radius: 999px; padding: 9px 0; font-size: 13px; font-weight: 600; background: #fff; color: #8ba07a; }
+.filter-btn.on { background: #8ba07a; color: #fff; box-shadow: 0 4px 10px rgba(139,160,122,.3); }
 .order-card { background: #fff; border-radius: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.05); padding: 14px; margin: 12px 16px 0; display: flex; flex-direction: column; gap: 8px; }
 .order-top { display: flex; justify-content: space-between; align-items: center; }
 .order-time { font-size: 11px; color: #9ca3af; }
@@ -109,19 +109,19 @@ input, textarea { font-family: inherit; font-size: 14px; }
 .st-rejected { background: #fee2e2; color: #ef4444; }
 .st-done { background: #f3f4f6; color: #9ca3af; }
 .order-line { display: flex; justify-content: space-between; font-size: 13px; }
-.order-msg { background: #eef2e7; border-radius: 10px; padding: 8px 10px; font-size: 12px; color: #55684a; line-height: 1.6; }
+.order-msg { background: #f1f4ea; border-radius: 10px; padding: 8px 10px; font-size: 12px; color: #71855f; line-height: 1.6; }
 .order-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 4px; }
-.order-total { font-size: 19px; font-weight: 900; color: #55684a; }
+.order-total { font-size: 19px; font-weight: 900; color: #71855f; }
 .order-actions { display: flex; gap: 8px; }
 .btn-xs { font-size: 12px; border-radius: 999px; padding: 7px 13px; font-weight: 600; }
 .btn-open-red { background: linear-gradient(to right, #ef4444, #f59e0b); color: #fff; }
 .btn-reject { border: 1.5px solid #fecaca; color: #ef4444; }
-.btn-accept { background: #6b7f5e; color: #fff; }
+.btn-accept { background: #8ba07a; color: #fff; }
 .btn-done { border: 1.5px solid #bbf7d0; color: #16a34a; }
 .reject-msg { font-size: 12px; background: #fef2f2; color: #ef4444; border-radius: 8px; padding: 6px 10px; }
 .mine-toggle { width: 100%; background: #fff; border-radius: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.05); padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
-.mine-toggle .t { color: #55684a; font-weight: 600; }
-.empty { text-align: center; color: #a9b89c; padding: 60px 0; font-size: 13px; }
+.mine-toggle .t { color: #71855f; font-weight: 600; }
+.empty { text-align: center; color: #b5c4a4; padding: 60px 0; font-size: 13px; }
 .empty-e { font-size: 46px; margin-bottom: 10px; }
 
 /* 红包 */
@@ -155,7 +155,7 @@ input, textarea { font-family: inherit; font-size: 14px; }
 .toast-item { background: rgba(31,41,55,.92); color: #fff; border-radius: 999px; padding: 9px 18px; font-size: 13px; animation: popin .25s ease-out; }
 .toast-item.ok { background: rgba(22,163,74,.92); }
 
-.role-switch { position: fixed; top: 12px; right: 12px; z-index: 45; background: rgba(255,255,255,.85); backdrop-filter: blur(6px); color: #6b7f5e; font-size: 11px; border-radius: 999px; padding: 6px 12px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.role-switch { position: fixed; top: 12px; right: 12px; z-index: 45; background: rgba(255,255,255,.85); backdrop-filter: blur(6px); color: #8ba07a; font-size: 11px; border-radius: 999px; padding: 6px 12px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
 
 @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-10px); } 40% { transform: translateX(10px); } 60% { transform: translateX(-8px); } 80% { transform: translateX(8px); } }
@@ -375,6 +375,7 @@ function renderHis() {
   const myOrders = activeOrders();
   const cats = [...new Set(MENU.map((m) => m.category))];
   app.innerHTML = `
+  <button class="role-switch" onclick="switchRole()">切换身份</button>
   <div class="banner">
     <div class="banner-row">
       <div class="banner-emoji">🧋</div>
@@ -386,7 +387,7 @@ function renderHis() {
   <div class="float-panel">
     <button class="mine-toggle" onclick="ui.showMine=!ui.showMine;render()">
       <span class="t">🔔 有 ${myOrders.length} 笔订单进行中${myOrders.some((o) => o.status === 'rejected') ? '（有被打回的！）' : ''}</span>
-      <span style="color:#a9b89c">${ui.showMine ? '收起 ▲' : '查看 ▼'}</span>
+      <span style="color:#b5c4a4">${ui.showMine ? '收起 ▲' : '查看 ▼'}</span>
     </button>
     ${ui.showMine ? `<div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">${myOrders.map(orderCardMini).join('')}</div>` : ''}
   </div>` : ''}
@@ -424,7 +425,7 @@ function menuItemHtml(m) {
 
 function orderCardMini(o) {
   return `<div class="card" style="margin:0">
-    <div class="order-top"><span style="color:#55684a;font-weight:700">${money(o.total)}</span>${statusBadge(o.status)}</div>
+    <div class="order-top"><span style="color:#71855f;font-weight:700">${money(o.total)}</span>${statusBadge(o.status)}</div>
     <div style="font-size:11px;color:#9ca3af;margin-top:4px">${o.items.map((i) => `${i.emoji}${esc(i.name)}×${i.qty}`).join('、')}</div>
     ${o.status === 'rejected' ? `<div class="reject-msg" style="margin-top:6px">💢 打回原因：${esc(o.reject_reason || '没有诚意，重选！')}</div>` : ''}
     ${o.status === 'accepted' ? `<div style="margin-top:6px;font-size:12px;background:#f0fdf4;color:#16a34a;border-radius:8px;padding:6px 10px">💗 已被接单，快去兑现承诺！${o.redpacket_amount > 0 ? `（红包 ${money(o.redpacket_amount)} 记得微信转账）` : ''}</div>` : ''}
@@ -448,7 +449,7 @@ function renderCartSheet() {
   <div class="sheet">
     <div class="sheet-head">确认道歉订单</div>
     <div class="sheet-body">
-      ${lines.map((l) => `<div class="line-row"><span>${l.emoji} ${esc(l.name)} × ${l.qty}</span><b style="color:#55684a">${l.isRedPacket ? money(redVal()) + '（自定）' : money(l.price * l.qty)}</b></div>`).join('')}
+      ${lines.map((l) => `<div class="line-row"><span>${l.emoji} ${esc(l.name)} × ${l.qty}</span><b style="color:#71855f">${l.isRedPacket ? money(redVal()) + '（自定）' : money(l.price * l.qty)}</b></div>`).join('')}
       ${hasRed() ? `
       <div class="red-box">
         <div class="red-label">🧧 红包金额（她会看到并去微信领取）</div>
@@ -496,7 +497,7 @@ function renderHer() {
   </div>
   <div style="padding-top:2px">
     ${list.length === 0 ? `<div class="empty"><div class="empty-e">${ui.filter === 'pending' ? '😌' : '📭'}</div>${ui.filter === 'pending' ? '他很乖，暂时没有惹你生气' : '还没有订单'}</div>` : list.map(orderCardHer).join('')}
-    ${ui.filter === 'done' && list.length ? `<div style="text-align:center;padding:14px"><button style="color:#a9b89c;font-size:12px" onclick="clearDone()">清空已完成记录</button></div>` : ''}
+    ${ui.filter === 'done' && list.length ? `<div style="text-align:center;padding:14px"><button style="color:#b5c4a4;font-size:12px" onclick="clearDone()">清空已完成记录</button></div>` : ''}
   </div>`;
 }
 
